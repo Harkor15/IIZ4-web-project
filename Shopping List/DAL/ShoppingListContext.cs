@@ -14,7 +14,8 @@ namespace Shopping_List.DAL
         {
         }
 
-        public DbSet<ShoppingLists> ShoppingLists { get; set; }
+        public DbSet<ShoppingList> ShoppingLists { get; set; }
+        public DbSet<ShoppingListItem> ShoppingListItems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

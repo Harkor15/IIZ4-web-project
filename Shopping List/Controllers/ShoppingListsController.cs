@@ -28,7 +28,7 @@ namespace Shopping_List.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ShoppingLists shoppingLists = db.ShoppingLists.Find(id);
+            ShoppingList shoppingLists = db.ShoppingLists.Find(id);
             if (shoppingLists == null)
             {
                 return HttpNotFound();
@@ -47,7 +47,7 @@ namespace Shopping_List.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,name")] ShoppingLists shoppingLists)
+        public ActionResult Create([Bind(Include = "ID,name")] ShoppingList shoppingLists)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +66,7 @@ namespace Shopping_List.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ShoppingLists shoppingLists = db.ShoppingLists.Find(id);
+            ShoppingList shoppingLists = db.ShoppingLists.Find(id);
             if (shoppingLists == null)
             {
                 return HttpNotFound();
@@ -79,7 +79,7 @@ namespace Shopping_List.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,name")] ShoppingLists shoppingLists)
+        public ActionResult Edit([Bind(Include = "ID,name")] ShoppingList shoppingLists)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace Shopping_List.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ShoppingLists shoppingLists = db.ShoppingLists.Find(id);
+            ShoppingList shoppingLists = db.ShoppingLists.Find(id);
             if (shoppingLists == null)
             {
                 return HttpNotFound();
@@ -110,7 +110,7 @@ namespace Shopping_List.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            ShoppingLists shoppingLists = db.ShoppingLists.Find(id);
+            ShoppingList shoppingLists = db.ShoppingLists.Find(id);
             db.ShoppingLists.Remove(shoppingLists);
             db.SaveChanges();
             return RedirectToAction("Index");

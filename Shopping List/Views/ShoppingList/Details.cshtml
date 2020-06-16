@@ -1,4 +1,4 @@
-﻿@model Shopping_List.Models.ShoppingLists
+﻿@model Shopping_List.Models.ShoppingList
 
 @{
     ViewBag.Title = "Details";
@@ -7,15 +7,15 @@
 <h2>Details</h2>
 
 <div>
-    <h4>ShoppingLists</h4>
+    <h4>ShoppingList</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.name)
+            @Html.DisplayNameFor(model => model.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.name)
+            @Html.DisplayFor(model => model.Name)
         </dd>
 
     </dl>

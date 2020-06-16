@@ -130,10 +130,12 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ShoppingListsController.cs" />
     <Compile Include="DAL\ShoppingListContext.cs" />
+    <Compile Include="DAL\ShoppingListInitializer.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ShoppingLists.cs" />
+    <Compile Include="Models\ShoppingListItem.cs" />
+    <Compile Include="Models\ShoppingList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -172,11 +174,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\ShoppingLists\Create.cshtml" />
-    <Content Include="Views\ShoppingLists\Delete.cshtml" />
-    <Content Include="Views\ShoppingLists\Details.cshtml" />
-    <Content Include="Views\ShoppingLists\Edit.cshtml" />
-    <Content Include="Views\ShoppingLists\Index.cshtml" />
+    <Content Include="Views\ShoppingList\Create.cshtml" />
+    <Content Include="Views\ShoppingList\Delete.cshtml" />
+    <Content Include="Views\ShoppingList\Details.cshtml" />
+    <Content Include="Views\ShoppingList\Edit.cshtml" />
+    <Content Include="Views\ShoppingList\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
