@@ -7,7 +7,8 @@ using Shopping_List.Models;
 
 namespace Shopping_List.DAL
 {
-    public class ShoppingListInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<ShoppingListContext>
+    public class ShoppingListInitializer :
+        System.Data.Entity.DropCreateDatabaseIfModelChanges<ShoppingListContext>
     {
         protected override void Seed(ShoppingListContext context)
         {
@@ -17,7 +18,7 @@ namespace Shopping_List.DAL
                 new ShoppingList { Name = "Shopping list for tomorow" }
             };
             shoppingLists.ForEach(s => context.ShoppingLists.Add(s));
-
+            context.SaveChanges();
             var shoppingListItems = new List<ShoppingListItem>
             {
                 new ShoppingListItem{ ListId=0, Name="Eggs", Checked=false},
