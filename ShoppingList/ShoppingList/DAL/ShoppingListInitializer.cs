@@ -20,17 +20,17 @@ namespace ShoppingList.DAL
             context.SaveChanges();
             var shoppingListItems = new List<Item>
             {
-                new Item{ ListId=0, Name="Eggs", Checked=false},
-                new Item{ ListId=0, Name="Cheese", Checked=false},
-                new Item{ ListId=0, Name="Whisky", Checked=true},
-                new Item{ ListId=0, Name="Beer", Checked=true},
-                new Item{ ListId=0, Name="Bread", Checked=false},
-                new Item{ ListId=1, Name="Fish", Checked=false},
-                new Item{ ListId=1, Name="Milk", Checked=false},
-                new Item{ ListId=1, Name="Chciken", Checked=false},
-                new Item{ ListId=1, Name="Tomatoes", Checked=false},
-                new Item{ ListId=1, Name="Tea", Checked=false},
-                new Item{ ListId=1, Name="Coffee", Checked=false}
+                new Item{ ListID=0, Name="Eggs", Checked=false},
+                new Item{ ListID=0, Name="Cheese", Checked=false},
+                new Item{ ListID=0, Name="Whisky", Checked=true},
+                new Item{ ListID=0, Name="Beer", Checked=true},
+                new Item{ ListID=0, Name="Bread", Checked=false},
+                new Item{ ListID=1, Name="Fish", Checked=false},
+                new Item{ ListID=1, Name="Milk", Checked=false},
+                new Item{ ListID=1, Name="Chciken", Checked=false},
+                new Item{ ListID=1, Name="Tomatoes", Checked=false},
+                new Item{ ListID=1, Name="Tea", Checked=false},
+                new Item{ ListID=1, Name="Coffee", Checked=false}
             };
             shoppingListItems.ForEach(s => context.Items.Add(s));
 

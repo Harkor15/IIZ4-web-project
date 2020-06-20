@@ -18,9 +18,31 @@
             @Html.DisplayFor(model => model.Name)
         </dd>
 
+
+        <dt>
+            @Html.DisplayNameFor(Model => Model.Items)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Items in shopping list</th>
+                    @foreach(var item in Model.Items)
+                    {
+                        <tr>
+                            <td> @Html.DisplayFor(modelItem => item.Name)</td>
+                            <td> @Html.ActionLink("Delete", "Delete", "Items", new { ID = item.ID }, null)</td>
+                            <td> @Html.ActionLink("Edit","Edit","Items",new { id=item.ID },null)</td>
+                        </tr>
+                    }
+                </tr>
+            </table>
+        </dd>
+
+
     </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index") |
+    @Html.ActionLink("Add item", "Create", "Items", new {ListID=Model.ID},null)
 </p>
