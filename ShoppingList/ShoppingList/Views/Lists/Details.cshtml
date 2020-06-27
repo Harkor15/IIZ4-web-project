@@ -30,6 +30,7 @@
                     {
                         <tr>
                             <td> @Html.DisplayFor(modelItem => item.Name)</td>
+                            <td> </td>
                             <td> @Html.ActionLink("Delete", "Delete", "Items", new { ID = item.ID }, null)</td>
                             <td> @Html.ActionLink("Edit","Edit","Items",new { id=item.ID },null)</td>
                         </tr>
